@@ -380,24 +380,26 @@ img {
 }
 
 .title h1 {
-	font-family: 'Dancing Script', cursive;
-	font-weight: bold;
-	font-style: normal;
-	font-size: 60px;
-	margin: 32px 0;
-	color: #674ea7;
+  font-family: 'Dancing Script', cursive;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 50px;
+  margin: 12px 0 8px; /* ↓ tightened margin */
+  color: #674ea7;
 }
 
 .title h2 {
-	font-family: 'Dancing Script', cursive;
-	font-weight: bold;
-	font-style: normal;
-	margin: 0;
-	padding: 0;
-	font-size: 24px;
-	color: #e25c67;
-	line-height: 1;
+  font-family: 'Dancing Script', cursive;
+  font-weight: bold;
+  font-style: normal;
+  /* margin: 0 0 8px;  */
+  padding: 0;
+  font-size: 20px; /* ↓ slightly smaller font */
+  color: #e25c67;
+  line-height: 1.2;
 }
+
+
 
 .dance-med {
 	font-family: 'Dancing Script', cursive;
@@ -415,7 +417,7 @@ img {
 	letter-spacing: 5px;
 	font-size: 24px;
 	color: #674ea7;
-	margin-top: 5px;
+	margin: 18px;
 }
 
 .title p {
@@ -435,7 +437,7 @@ img {
 	justify-content: center;
 	-webkit-align-items: center;
 	align-items: center;
-	/* padding: 20px; */
+	padding: 20px;
 	text-align: center;
 	/* min-height:100%; */
 }
@@ -456,10 +458,11 @@ body {
 	/* height: 100vh;
     width: 100%; */
 	flex-direction: column;
+	overflow: hidden;
 }
 
 .title {
-	margin-bottom: 40px;
+	/* margin-bottom: 40px; */
 }
 
 #time {
@@ -492,6 +495,7 @@ body {
 	grid-template-columns: 1fr 1fr;
 	border-radius: 10px;
 	overflow: hidden;
+	padding: 10px;
 }
 
 .block {
@@ -576,4 +580,59 @@ a {
 	display: flex;
 	font-size: 12px;
 	letter-spacing: 0pt;
+}
+.countdown-wrapper {
+  text-align: center;
+  margin: 10px auto;
+  padding: 0 20px;
+}
+
+.countdown-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 36px;
+  color: #874562;
+   /* margin-bottom: 20px;  */
+   margin-bottom: 12px;
+}
+
+#time .container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.block {
+  width: 120px;
+  height: 100px;
+  padding: 4px;
+  background: #f2f2f2;
+  color: #333;
+  border-radius: 16px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.block span {
+  font-size: 14px;
+  color: #874562;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .block {
+    width: 100px;
+    height: 90px;
+    font-size: 16px;
+  }
+
+  .countdown-title {
+    font-size: 28px;
+  }
 }
